@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="WS1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="78a18edb-946d-4e56-b660-93833bf5cd61">
+	<property name="ireport.zoom" value="2.1435888100000065"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.callouts" value="##Fri Jul 01 09:50:02 ICT 2022"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#00FFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#00FFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="ABC" uuid="d6b9a51f-813a-4dd5-8798-a075310cf55c">
+		<queryString language="SQL">
+			<![CDATA[SELECT '1850-1900' YEARS, COUNT(1)YEAR_COUNT FROM PRESIDENT
+WHERE BIRTH_YR BETWEEN 1850 AND 1900
+UNION
+SELECT '1901-2000' YEARS, COUNT(1)YEAR_COUNT FROM PRESIDENT
+WHERE BIRTH_YR BETWEEN 1901 AND 2000]]>
+		</queryString>
+		<field name="YEARS" class="java.lang.String"/>
+		<field name="YEAR_COUNT" class="java.math.BigDecimal"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT*FROM PRESIDENT
+WHERE BIRTH_YR >1850]]>
+	</queryString>
+	<field name="PRES_ID" class="java.math.BigDecimal"/>
+	<field name="PRES_NAME" class="java.lang.String"/>
+	<field name="BIRTH_YR" class="java.math.BigDecimal"/>
+	<field name="YRS_SERV" class="java.math.BigDecimal"/>
+	<field name="DEATH_AGE" class="java.math.BigDecimal"/>
+	<field name="PARTY" class="java.lang.String"/>
+	<field name="STATE_BORN" class="java.lang.String"/>
+	<variable name="PARTY_1" class="java.lang.Integer" resetType="Group" resetGroup="GROUP_PARTY" calculation="Count">
+		<variableExpression><![CDATA[$F{PARTY}]]></variableExpression>
+	</variable>
+	<variable name="PRES_NAME_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{PRES_NAME}]]></variableExpression>
+	</variable>
+	<group name="GROUP_PARTY">
+		<groupExpression><![CDATA[$F{PARTY}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<textField>
+					<reportElement x="0" y="0" width="100" height="20" uuid="a627dde6-ff52-4bbe-be53-847d3d3fbdcb"/>
+					<textElement>
+						<font fontName="TH Sarabun New"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PARTY}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="17">
+				<textField>
+					<reportElement x="0" y="0" width="431" height="17" uuid="508af750-9e64-452a-af96-087a69aacb5f"/>
+					<textElement>
+						<font fontName="TH Sarabun New"/>
+					</textElement>
+					<textFieldExpression><![CDATA["จำนวนทั้งหมด :"+$V{GROUP_PARTY_COUNT}+" คน"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="21" width="555" height="33" uuid="121927f3-8c37-42d4-b40c-2249a13f2a67"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New" size="24"/>
+				</textElement>
+				<text><![CDATA[รายงานประธานาธิบดี]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="34" width="555" height="1" uuid="7fb3688d-020c-4a50-a766-e674011a3279"/>
+			</line>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="469" y="20" width="86" height="14" uuid="cbb69ed4-1e00-4fef-ad11-b747277f6732"/>
+				<textElement textAlignment="Right">
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="471" y="0" width="70" height="20" uuid="4bfe8256-ac88-4d43-98b4-c2249c50ae29"/>
+				<textElement textAlignment="Right">
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="541" y="0" width="14" height="20" uuid="b2a817bb-c6a0-45fe-9fa4-6135014196b7"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="0" width="100" height="20" uuid="5b524146-c6d0-4c2c-a6e2-616bbd3f6229"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="111" y="0" width="100" height="20" uuid="59473b4d-93fd-4451-96b3-e89f5459a90f"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="1" width="100" height="20" uuid="e88df080-0930-4cab-84b7-34c8a259b87a"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<text><![CDATA[Death Age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="0" width="100" height="20" uuid="725f044d-159a-4d19-ae70-b189e3e67458"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<text><![CDATA[State Born]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="1" width="100" height="20" uuid="3538706a-5a30-4134-af41-0e59b290fb6e"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<text><![CDATA[Birth Year]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="22" width="555" height="1" uuid="b2f92cb6-e2cf-4dc9-92a2-25d9ac0f3ef6"/>
+			</line>
+			<elementGroup/>
+			<staticText>
+				<reportElement x="0" y="2" width="32" height="20" uuid="cd5f1d01-93b3-45da-9794-a601656860f3"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="341" y="0" width="100" height="20" uuid="83484a68-c9d0-40b1-8808-2d59bd686081"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{STATE_BORN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="92f2208c-ca3f-440f-96ac-64aba554c280"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BIRTH_YR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="226" y="0" width="100" height="20" uuid="9737de1e-25a9-448e-9ab1-157c2d9b45b0"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEATH_AGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="100" height="20" uuid="86fba6da-f996-4dce-8ecf-34da65c97c60"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRES_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="81e7074b-80a3-48b5-8dad-b1a4b434668e"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GROUP_PARTY_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="92" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table" style="table" x="326" y="42" width="229" height="50" uuid="d66d7b46-c8b6-49c1-8214-4330ed8590d1"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ABC" uuid="47711e7e-2f08-4748-9ebf-828f3f92f559">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="69" uuid="59517423-5861-40ca-8cc1-b34727fa62f5">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="69" height="30" uuid="42cfdd29-0f51-41f3-b272-079eb8b96467"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[ช่วง]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="69" height="20" uuid="d54560bf-a9b4-4a34-9a15-c789f1549657"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{YEARS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="77" uuid="9b273c69-76ff-43dc-8863-e61c6c104579">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="76" height="30" uuid="a433c0ba-4dd4-413a-8c8c-99cd118da1aa"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[จำนวน]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="76" height="20" uuid="bc1965dc-57ab-49cc-8576-24e672b54adf"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{YEAR_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<line>
+				<reportElement x="238" y="16" width="1" height="76" uuid="15d58c8e-2a35-4058-be8f-61af4b2742a3"/>
+			</line>
+			<staticText>
+				<reportElement x="241" y="42" width="85" height="20" uuid="fab90078-ddca-4931-ba4c-58a328bbb81e"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<text><![CDATA[จำนวนคนที่เกิดระหว่างปี]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="42" width="194" height="20" uuid="85f7f2d5-25c9-443f-984a-26f09a581bfa"/>
+				<textFieldExpression><![CDATA["รวมทั้งหมด"+$V{REPORT_COUNT}+" คน"]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
