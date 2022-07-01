@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a2bf922e-cd9e-4248-b39c-dd9319916490">
 	<property name="ireport.zoom" value="1.6105100000000014"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="192"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -186,7 +186,6 @@ WHERE BIRTH_YR > 1850]]>
 	<field name="DEATH_AGE" class="java.math.BigDecimal"/>
 	<field name="PARTY" class="java.lang.String"/>
 	<field name="STATE_BORN" class="java.lang.String"/>
-	<sortField name="PARTY"/>
 	<variable name="PRES_NAME_1" class="java.lang.Integer" resetType="Column" calculation="Count">
 		<variableExpression><![CDATA[$F{PRES_NAME}]]></variableExpression>
 	</variable>
@@ -201,16 +200,16 @@ WHERE BIRTH_YR > 1850]]>
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band height="21">
+			<band height="22">
 				<textField>
-					<reportElement x="100" y="0" width="19" height="20" uuid="22f3126a-e3da-4daa-8100-c63bf6a2a4a1"/>
+					<reportElement x="94" y="0" width="19" height="20" uuid="22f3126a-e3da-4daa-8100-c63bf6a2a4a1"/>
 					<textElement>
 						<font fontName="TH Sarabun New" size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{groupParty_COUNT}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement x="31" y="0" width="70" height="20" uuid="6d834c4b-ee54-4c97-9e1c-78a44dde9d2a"/>
+					<reportElement x="24" y="2" width="70" height="20" uuid="6d834c4b-ee54-4c97-9e1c-78a44dde9d2a"/>
 					<textElement>
 						<font fontName="TH Sarabun New" size="12"/>
 					</textElement>
@@ -260,12 +259,17 @@ WHERE BIRTH_YR > 1850]]>
 				<text><![CDATA[วันที่พิมพ์ : ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="402" y="20" width="80" height="20" uuid="58dc084f-1d21-47c4-97c4-617d431d051f"/>
-				<textElement textAlignment="Right"/>
-				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				<reportElement x="267" y="20" width="215" height="20" uuid="58dc084f-1d21-47c4-97c4-617d431d051f"/>
+				<textElement textAlignment="Right">
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<textFieldExpression><![CDATA["หน้าที่ "+$V{PAGE_NUMBER}+" จาก"]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
 				<reportElement x="481" y="20" width="40" height="20" uuid="c5d0a100-d461-4ab0-bc15-fef6ff2e7553"/>
+				<textElement>
+					<font fontName="TH Sarabun New"/>
+				</textElement>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -332,7 +336,7 @@ WHERE BIRTH_YR > 1850]]>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="82" splitType="Stretch"/>
+		<band height="41" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
 		<band height="65" splitType="Stretch"/>
@@ -387,13 +391,6 @@ WHERE BIRTH_YR > 1850]]>
 					</jr:column>
 				</jr:table>
 			</componentElement>
-			<textField evaluationTime="Column">
-				<reportElement x="85" y="4" width="108" height="28" uuid="bc31c402-2297-4246-95b2-48e950ef46b4"/>
-				<textElement>
-					<font fontName="TH Sarabun New" size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$V{PRES_NAME_1}]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement x="29" y="4" width="65" height="28" uuid="2c9ce536-7b27-4861-b010-14508ec60714"/>
 				<textElement>
@@ -411,6 +408,20 @@ WHERE BIRTH_YR > 1850]]>
 				</textElement>
 				<text><![CDATA[จำนวนคนที่เกิดระหว่างปี]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="131" y="4" width="14" height="20" uuid="f2922abb-8eda-44c9-bbe6-58d6252698a0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="12"/>
+				</textElement>
+				<text><![CDATA[คน]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="4" width="64" height="20" uuid="d2aa23ca-5ff6-44c5-9520-856fc3d83ba4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
 		</band>
 	</summary>
 </jasperReport>
