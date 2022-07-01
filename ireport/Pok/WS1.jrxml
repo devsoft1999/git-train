@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fa791b3a-7e93-4e81-93f1-0ea54a4703e6">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_CH" mode="Opaque" backcolor="#73E6E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="f371d5f9-4b60-49e8-bb9b-a9c3b7626a43">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT '1850-1900' YEARS, COUNT(1)YEAR_COUNT 
+FROM PRESIDENT
+WHERE BIRTH_YR BETWEEN 1850 AND 1900
+UNION
+SELECT '1901-2000' YEARS, COUNT(1)YEAR_COUNT FROM PRESIDENT
+WHERE BIRTH_YR BETWEEN 1901 AND 2000]]>
+		</queryString>
+		<field name="YEARS" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="YEARS"/>
+			<property name="com.jaspersoft.studio.field.label" value="YEARS"/>
+		</field>
+		<field name="YEAR_COUNT" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="YEAR_COUNT"/>
+			<property name="com.jaspersoft.studio.field.label" value="YEAR_COUNT"/>
+		</field>
+		<group name="YEARS">
+			<groupExpression><![CDATA[$F{YEARS}]]></groupExpression>
+		</group>
+		<group name="YEAR_COUNT">
+			<groupExpression><![CDATA[$F{YEAR_COUNT}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM PRESIDENT
+WHERE BIRTH_YR > 1850]]>
+	</queryString>
+	<field name="PRES_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PRES_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="PRES_ID"/>
+	</field>
+	<field name="PRES_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PRES_NAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="PRES_NAME"/>
+	</field>
+	<field name="BIRTH_YR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="BIRTH_YR"/>
+		<property name="com.jaspersoft.studio.field.label" value="BIRTH_YR"/>
+	</field>
+	<field name="YRS_SERV" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="YRS_SERV"/>
+		<property name="com.jaspersoft.studio.field.label" value="YRS_SERV"/>
+	</field>
+	<field name="DEATH_AGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="DEATH_AGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="DEATH_AGE"/>
+	</field>
+	<field name="PARTY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PARTY"/>
+		<property name="com.jaspersoft.studio.field.label" value="PARTY"/>
+	</field>
+	<field name="STATE_BORN" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="STATE_BORN"/>
+		<property name="com.jaspersoft.studio.field.label" value="STATE_BORN"/>
+	</field>
+	<group name="groupParty">
+		<groupExpression><![CDATA[$F{PARTY}]]></groupExpression>
+		<groupHeader>
+			<band height="27">
+				<textField>
+					<reportElement x="1" y="-1" width="99" height="25" uuid="9fd97fa8-c982-4d4b-b93e-9a593d0d95ff"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH Sarabun New" size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PARTY}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="24">
+				<staticText>
+					<reportElement x="0" y="1" width="73" height="22" uuid="91c9e2c3-4ffe-4784-91e0-c7ce63f0faa9"/>
+					<textElement>
+						<font fontName="TH Sarabun New" size="16"/>
+					</textElement>
+					<text><![CDATA[จำนวนทั้งหมด : ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="73" y="1" width="70" height="22" uuid="f2fdd3ca-eaf0-4b9c-b875-d8a5d379ae67"/>
+					<textElement>
+						<font fontName="TH Sarabun New" size="16"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{groupParty_COUNT} + " คน"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="212" y="7" width="141" height="30" uuid="48b3d484-6469-4ab5-99fa-b45cbd6ec388"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รายงานประธานาธิบดี]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="56" splitType="Stretch">
+			<textField>
+				<reportElement x="524" y="26" width="11" height="29" uuid="dfe72f83-0dbe-436a-94eb-339ad4825f4e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="487" y="26" width="35" height="30" uuid="a5f68630-98e9-4578-b5f0-10d74a86a561"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<text><![CDATA[หน้าที่ :]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="550" y="30" width="10" height="25" uuid="08c5ecfe-4014-4299-ae0c-0e0fb7552ebe"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="535" y="25" width="15" height="30" uuid="aee57860-a380-4278-8148-0cc4d0973396"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<text><![CDATA[of]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="502" y="0" width="100" height="30" uuid="12b3ea45-02cf-4b64-b80f-392534b52de5"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="3" width="100" height="30" uuid="cf6532b8-a17e-4340-9136-ecd4116a8a30"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<text><![CDATA[โปรแกรม:001]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="-4" width="55" height="30" uuid="6995c112-24da-4b4b-807a-fae616c42d1f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<text><![CDATA[วันที่พิมพ์ : ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="78" y="3" width="100" height="25" uuid="f2a9f82b-aefc-4884-b697-f55bd3b02250">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="28c5122d-886a-468d-b23f-1ddec1774035"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="483" y="2" width="100" height="25" uuid="0b5cff9e-e5d2-4caa-b864-a7fa6fb0149f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d403ac59-074c-4940-879b-4b91475c3529"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Birth year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="2" width="100" height="25" uuid="afd3c963-6902-4c3b-8fb7-122302047afd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17794df3-c357-4684-a1cc-18bca831d1d1"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[State Born]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="3" width="558" height="1" uuid="c63b9559-3596-4637-a6de-92f41dfc1edb"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="26" width="558" height="3" uuid="3c635576-60ad-438e-8896-cb318b3c14c0"/>
+			</line>
+			<staticText>
+				<reportElement x="192" y="2" width="100" height="26" uuid="e1ee97ac-9cb0-46f7-9a5d-f664c1f586f1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6b1a1392-6d91-433c-8101-9e076d6d343a"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="4" width="30" height="25" uuid="783cd854-3148-44c8-ba9e-5b05d9e6e21a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="28c5122d-886a-468d-b23f-1ddec1774035"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="79" y="0" width="100" height="22" uuid="841e8566-b0ca-4097-a881-ea3e5b6368ee">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="28c5122d-886a-468d-b23f-1ddec1774035"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRES_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="0" width="100" height="22" uuid="588b562c-e126-4946-aa7e-54f186f1e88c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d403ac59-074c-4940-879b-4b91475c3529"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BIRTH_YR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="309" y="-1" width="100" height="22" uuid="61bc4989-43e0-4e06-a419-fdbe410f8d06">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17794df3-c357-4684-a1cc-18bca831d1d1"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{STATE_BORN}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="194" y="0" width="100" height="22" uuid="6b621d02-e803-4178-8a3d-9364c569f58e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6b1a1392-6d91-433c-8101-9e076d6d343a"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEATH_AGE} == null ? "" : $F{DEATH_AGE} + " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="0" width="70" height="22" uuid="6e94e763-042d-414f-b011-9aeccaef0a68"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{groupParty_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="33" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="358" splitType="Stretch">
+			<textField>
+				<reportElement x="58" y="2" width="100" height="25" uuid="02f49c8b-0aaf-42e7-96aa-56e6d8549195"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT} + " คน"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="1" width="59" height="26" uuid="6e0162a4-169c-4b76-b633-46e7d0f4c6b3"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<text><![CDATA[รวมทั้งหมด : ]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="357" y="4" width="200" height="60" uuid="154399e0-2e09-444a-8951-39288799566b">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 3_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 3_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 3_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="819a1104-cd6f-4d6e-9dd0-4e4070a6e1ba">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="100" uuid="ba32c878-83fd-493c-96d0-104e5abfcc87">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="cc7392b1-b373-4597-92ca-d21feabd7092"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="TH Sarabun New" size="16"/>
+								</textElement>
+								<text><![CDATA[ช่วง]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" uuid="227e4f25-26e3-465b-bca3-0b19701869bd"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="TH Sarabun New" size="16"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{YEARS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="6b13d54e-c555-4cc6-b5df-db8e42f43b19">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="c07e4271-6152-490f-8982-f7cadca1b076"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="TH Sarabun New" size="16"/>
+								</textElement>
+								<text><![CDATA[จำนวน]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" uuid="69a38d45-256c-4907-91fd-305977eaae51"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="TH Sarabun New" size="16"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{YEAR_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="240" y="4" width="109" height="26" uuid="be2133d6-8981-4b0b-a020-b20af24c50e6"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<text><![CDATA[จำนวนคนที่เกิดระหว่างปี]]></text>
+			</staticText>
+			<line>
+				<reportElement x="230" y="-2" width="1" height="72" uuid="bfc5a0c5-b55d-49ce-92a6-6b89b340b902"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
